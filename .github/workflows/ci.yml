@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse all Python files
+        run: |
+          for f in spherelinks_generator/*.py; do
+            python3 -c "import ast; ast.parse(open('$f').read())" && echo "OK $f"
+          done
+      - name: Validate manifest
+        run: |
+          python3 -c "import tomllib; tomllib.load(open('spherelinks_generator/blender_manifest.toml','rb'))"

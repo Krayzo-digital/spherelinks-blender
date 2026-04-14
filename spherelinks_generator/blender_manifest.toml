@@ -1,0 +1,22 @@
+schema_version = "1.0.0"
+
+id = "spherelinks_generator"
+version = "0.1.0"
+name = "SphereLinks 3D Generator"
+tagline = "Generate 3D meshes and textures from reference images"
+maintainer = "SphereLinks <hello@spherelinks.io>"
+type = "add-on"
+
+website = "https://spherelinks.io"
+tags = ["Import-Export", "Mesh"]
+
+blender_version_min = "4.2.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
+
+# Runtime permissions required by the extension system (Blender 4.2+).
+[permissions]
+network = "Uploads reference images and meshes to the SphereLinks public API and downloads the resulting GLB."
+files = "Reads the selected reference image and writes a temporary GLB to the OS temp directory."

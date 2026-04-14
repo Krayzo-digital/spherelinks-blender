@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Syntax check
+        run: |
+          for f in spherelinks_generator/*.py; do
+            python3 -c "import ast; ast.parse(open('$f').read())"
+          done
+
+      - name: Build addon zip
+        run: |
+          zip -r spherelinks_generator.zip spherelinks_generator \
+            -x "*.pyc" "*__pycache__*"
+          ls -la spherelinks_generator.zip
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: spherelinks_generator.zip
+          generate_release_notes: true
