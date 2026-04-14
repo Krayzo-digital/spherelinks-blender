@@ -17,7 +17,7 @@ downloads and imports the resulting GLB as soon as it's ready.
 ### Blender 4.2 or newer (recommended — new Extensions system)
 
 1. Download the latest `spherelinks_generator.zip` from the
-   [Releases page](https://github.com/spherelinks/spherelinks-blender/releases).
+   [Releases page](https://github.com/Krayzo-digital/spherelinks-blender/releases).
 2. In Blender: **Edit → Preferences → Add-ons → ⌄ (top-right) → Install from Disk…**
 3. Pick the zip. Enable the checkbox next to "SphereLinks 3D Generator".
 4. Expand the entry, paste your API key, leave the Base URL at
@@ -73,7 +73,7 @@ No pip dependencies — the addon uses only Blender's bundled Python stdlib.
 
 ```sh
 # Clone
-git clone https://github.com/spherelinks/spherelinks-blender
+git clone https://github.com/Krayzo-digital/spherelinks-blender
 cd spherelinks-blender
 
 # Build the installable zip
