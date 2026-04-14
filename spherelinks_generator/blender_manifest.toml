@@ -16,6 +16,10 @@ license = [
   "SPDX:GPL-3.0-or-later",
 ]
 
+copyright = [
+  "2026 SphereLinks",
+]
+
 # Runtime permissions required by the extension system (Blender 4.2+).
 [permissions]
 network = "Uploads reference images and meshes to the SphereLinks public API and downloads the resulting GLB."
