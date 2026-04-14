@@ -22,5 +22,5 @@ copyright = [
 
 # Runtime permissions required by the extension system (Blender 4.2+).
 [permissions]
-network = "Uploads reference images and meshes to the SphereLinks public API and downloads the resulting GLB"
-files = "Reads the selected reference image and writes a temporary GLB to the OS temp directory"
+network = "Sends images and meshes to the SphereLinks API, downloads GLBs"
+files = "Reads reference images and writes temporary GLBs to temp dir"
